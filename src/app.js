@@ -1,27 +1,38 @@
+// -----------------------
+// Función suma (para tests)
+// -----------------------
 export function suma(a, b) {
   return a + b;
 }
 
-// Para mostrar en consola:
-console.log('App lista');
+// Mensaje en consola
+console.log("App lista");
 
 // -----------------------
-// NUEVO DEL PASO 3
+// Función para UI (solo navegador)
 // -----------------------
-function agregarItem(texto) {
-  const lista = document.getElementById('lista');
-  const li = document.createElement('li');
+export function agregarItem(texto) {
+  // Si NO existe document (Node), no ejecuta DOM
+  if (typeof document === "undefined") return;
+
+  const lista = document.getElementById("lista");
+  if (!lista) return;
+
+  const li = document.createElement("li");
   li.textContent = texto;
   lista.appendChild(li);
 }
 
-// Agregar evento al botón
-document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('btnAgregar');
-  btn.addEventListener('click', () => {
-    agregarItem('Nuevo item');
+// -----------------------
+// EventListener DOM — SOLO navegador
+// -----------------------
+if (typeof document !== "undefined") {
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("btnAgregar");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        agregarItem("Nuevo item");
+      });
+    }
   });
-});
-
-// Exportación para los tests (Node)
-module.exports = suma;
+}
