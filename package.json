@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "taller-git-ci-3223875-samur",
   "version": "1.0.0",
   "description": "Repo para el taller de Git y GitHub (SENA). Contiene UI básica, tests y configuración de Prettier + CI.",
