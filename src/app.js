@@ -3,8 +3,7 @@ export function suma(a, b) {
 }
 
 // Para mostrar en consola:
-console.log("App lista");
-
+console.log('App lista');
 
 // -----------------------
 // NUEVO DEL PASO 3
