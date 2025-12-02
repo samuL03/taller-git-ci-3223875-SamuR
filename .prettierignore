@@ -2,3 +2,4 @@
 /dist
 /build
 /*.min.js
+.github/workflows/*.yml

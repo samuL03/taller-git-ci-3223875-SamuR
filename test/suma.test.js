@@ -1,8 +1,7 @@
-import assert from 'assert';
+import test from 'node:test';
+import assert from 'node:assert/strict';
 import { suma } from '../src/app.js';
 
-describe('suma()', () => {
-  it('debe sumar 2 + 3 = 5', () => {
-    assert.strictEqual(suma(2, 3), 5);
-  });
+test('debe sumar 2 + 3 = 5', () => {
+  assert.equal(suma(2, 3), 5);
 });
