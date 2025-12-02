@@ -23,4 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Exportación para los tests (Node)
-module.exports = suma;
+module.exports = suma;  
